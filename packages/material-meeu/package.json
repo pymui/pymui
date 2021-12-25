@@ -1,0 +1,22 @@
+{
+  "name": "@meeu/material",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Meeu is a component librabry for React to build UI faster, beautiful, adaptive. Meeu design system built on top of Material You design",
+  "keywords": [
+    "react",
+    "react-comonent",
+    "material you",
+    "material design",
+    "meeu"
+  ],
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}
