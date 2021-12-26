@@ -1,5 +1,6 @@
 {
   "version": "0.0.0",
+  "description": "Meeu is a component librabry for React to build UI faster, beautiful, adaptive. Meeu design system built on top of Material You design",
   "private": true,
   "workspaces": [
     "apps/*",
