@@ -3,8 +3,6 @@
 
 echo '🏗️👷 Styling, testing and building your project before committing'
 
-yarn lint-staged
-
  yarn lint ||
 (
         echo '😤🏀👋😤 Get that weak shit out of here! 😤🏀👋😤 

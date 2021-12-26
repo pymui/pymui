@@ -14,14 +14,8 @@
   },
   "devDependencies": {
     "husky": "^7.0.0",
-    "lint-staged": "^12.1.4",
     "prettier": "^2.5.1",
     "turbo": "latest"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "yarn format"
-    ]
   },
   "turbo": {
     "pipeline": {
