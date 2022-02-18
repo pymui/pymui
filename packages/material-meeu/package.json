@@ -13,6 +13,11 @@
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "valtio": "^1.3.0"
+  },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
