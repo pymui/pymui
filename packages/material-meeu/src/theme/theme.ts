@@ -674,6 +674,17 @@ const theme = {
       5: `0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0,0,0,0.30);`,
     },
   },
+  breakPoints: {
+    points(key: "xs" | "sm" | "md" | "lg" | "xl") {
+      return new Map<typeof key, number>([
+        ["xs", 0],
+        ["sm", 600],
+        ["md", 905],
+        ["lg", 1240],
+        ["xl", 1440],
+      ]).get(key) as number;
+    },
+  },
 };
 
 export default theme;
