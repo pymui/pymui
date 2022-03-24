@@ -1,9 +1,11 @@
+import type { PolymorphicWithoutRef } from "./PolymorphicWithoutRef";
+
 type Width = "sm" | "md" | "lg" | "xl";
 
-export interface IContainer {
+export type ContainerOwnProps = {
   /**
    * **Sets the max Width of the Container.** \
    *  By default it sets to `lg`
    */
-  maxWidth: Width;
-}
+  maxWidth?: Width;
+};

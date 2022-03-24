@@ -4,14 +4,13 @@ import { useTheme } from "../theme";
 
 interface Button {
   variant: "default" | "filled" | "outlined" | "text" | "elevated" | "tonal";
-  component: React.ElementType;
 }
 
-export type IButton = Partial<Button>;
+export type ButtonProps = Partial<Button>;
 
 const Button = styled("button", {
   label: "Button",
-})<IButton>(({ variant }) => {
+})<ButtonProps>(({ variant }) => {
   const { theme, type } = useTheme();
   const buttonVariant = useMemo(
     () =>
@@ -158,9 +157,9 @@ const Button = styled("button", {
       cursor: "pointer",
       border: "none",
       borderRadius: "2rem",
-    } as CSSObject,
+    },
     buttonVariant.get(variant)
-  );
+  ) as CSSObject;
 });
 
 Button.defaultProps = {

@@ -1,4 +1,4 @@
-import { IGridItem } from "../types";
+import { GridItemOwnProps } from "../types";
 import styled, { CSSObject } from "@emotion/styled";
 import { useMemo } from "react";
 import { useTheme } from "../theme";
@@ -8,7 +8,7 @@ const getScreen = (value: number) =>
 
 const GridItem = styled("div", {
   label: "gridItem",
-})<Partial<IGridItem>>(({ xs, sm, md, lg, xl }) => {
+})<Partial<GridItemOwnProps>>(({ xs, sm, md, lg, xl }) => {
   const { theme } = useTheme();
   const _xs = useMemo(
     () =>

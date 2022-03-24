@@ -1,11 +1,11 @@
-import type { IContainer } from "../types";
+import type { ContainerOwnProps } from "../types";
 import styled, { CSSObject } from "@emotion/styled";
 import { useTheme } from "../theme";
 import { useMemo } from "react";
 
 const Container = styled("div", {
-  label: "Container",
-})<Partial<IContainer>>(({ maxWidth }) => {
+  label: "container",
+})<ContainerOwnProps>(({ maxWidth }) => {
   const { theme } = useTheme();
   const _maxWidth = useMemo(
     () =>
@@ -20,6 +20,7 @@ const Container = styled("div", {
   return Object.assign(
     {
       margin: "0 auto",
+      padding: "0 0.5rem",
     },
     _maxWidth
   ) as CSSObject;
