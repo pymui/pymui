@@ -17,7 +17,7 @@ const Button = React.forwardRef(
     innerRef: typeof props.ref
   ) => {
     const { component, ...rest } = props;
-    return <ButtonBase component={component} ref={innerRef} {...rest} />;
+    return <ButtonBase as={component} ref={innerRef} {...rest} />;
   }
 ) as ButtonElement;
 
