@@ -10,9 +10,9 @@ type GridProps<T extends React.ElementType> = PolymorphicWithRef<
 
 type GridElement = <E extends React.ElementType<any> = "div">(
   props: GridProps<E>
-) => JSX.Element;
+) => React.ReactElement<GridProps<E>>;
 
-const Grid = React.forwardRef(
+const GridContainer: GridElement = React.forwardRef(
   <T extends React.ElementType>(
     props: GridProps<T>,
     innerRef: typeof props.ref
@@ -22,12 +22,12 @@ const Grid = React.forwardRef(
       <GridBase as={component as typeof component} ref={innerRef} {...rest} />
     );
   }
-) as GridElement;
+);
 
 /**
  * **A Grid is a two dimensional layout utility that arranges elements in rows and columns.** \
  * By default it has 12 columns.
  */
-const GridContainer = Object.assign(Grid, { Item: GridItem });
+const Grid = Object.assign(GridContainer, { Item: GridItem });
 
-export { GridContainer as Grid };
+export default Grid;

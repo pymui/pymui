@@ -1,19 +1,24 @@
 import * as React from "react";
-import type { ToolbarOwnProps, PolymorphicWithoutRef } from "../types";
+import type { ToolbarOwnProps, PolymorphicWithRef } from "../types";
 import { ToolbarBase } from "../base-components";
-type ToolbarProps<T extends React.ElementType> = PolymorphicWithoutRef<
+
+type ToolbarProps<T extends React.ElementType> = PolymorphicWithRef<
   T,
   ToolbarOwnProps
 >;
 
 type ToolbarElement = <T extends React.ElementType = "div">(
   props: ToolbarProps<T>
-) => JSX.Element;
+) => React.ReactElement<ToolbarProps<T>>;
 
-const Toolbar: ToolbarElement = (props) => {
-  const { component = "div", ...rest } = props;
-
-  return <ToolbarBase as={component} {...rest} />;
-};
+const Toolbar: ToolbarElement = React.forwardRef(
+  <T extends React.ElementType>(
+    props: ToolbarProps<T>,
+    innerRef: typeof props.ref
+  ) => {
+    const { component, ...rest } = props;
+    return <ToolbarBase ref={innerRef} as={component} {...rest} />;
+  }
+);
 
 export default Toolbar;

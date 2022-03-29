@@ -10,19 +10,17 @@ type StackProps<T extends React.ElementType> = PolymorphicWithRef<
 
 type StackElement = <E extends React.ElementType = "div">(
   props: StackProps<E>
-) => JSX.Element;
+) => React.ReactElement<StackProps<E>>;
 
-const StackRoot = React.forwardRef(
+const StackRoot: StackElement = React.forwardRef(
   <E extends React.ElementType>(
     props: StackProps<E>,
     innerRef: typeof props.ref
   ) => {
-    const { component = "div", ...rest } = props;
-    return (
-      <StackBase ref={innerRef} as={component as typeof component} {...rest} />
-    );
+    const { component, ...rest } = props;
+    return <StackBase ref={innerRef} as={component} {...rest} />;
   }
-) as StackElement;
+);
 
 /**
  * **A Stack is a layout component that arranges its children in a horizontal or vertical stack.**

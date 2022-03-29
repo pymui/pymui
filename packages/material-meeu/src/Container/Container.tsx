@@ -9,13 +9,12 @@ export type ContainerProps<E extends React.ElementType> = PolymorphicWithRef<
 
 export type ContainerElement = <E extends React.ElementType = "div">(
   props: ContainerProps<E>
-) => JSX.Element;
-
+) => React.ReactElement<ContainerProps<E>>;
 /**
  * **A Container is used to contain elements inside a specific width.** \
  * By default the maxWidth set to `lg` (1240px)
  */
-const Container = React.forwardRef(
+const Container: ContainerElement = React.forwardRef(
   <E extends React.ElementType>(
     props: ContainerProps<E>,
     innerRef: typeof props.ref
@@ -29,6 +28,6 @@ const Container = React.forwardRef(
       />
     );
   }
-) as ContainerElement;
+);
 
 export default Container;

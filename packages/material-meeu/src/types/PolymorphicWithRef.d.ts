@@ -1,5 +1,11 @@
 import React from "react";
 
+declare module "react" {
+  function forwardRef<T, P = {}>(
+    render: (props: P, ref: React.Ref<T>) => React.ReactElement<P> | null
+  ): (props: P & React.RefAttributes<T>) => React.ReactElement<P>;
+}
+
 //  Polymorphic with ref
 
 export type PropsOf<

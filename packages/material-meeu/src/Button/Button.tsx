@@ -9,9 +9,9 @@ type ButtonProps<T extends React.ElementType> = PolymorphicWithRef<
 
 type ButtonElement = <T extends React.ElementType = "button">(
   props: ButtonProps<T>
-) => JSX.Element;
+) => React.ReactElement<ButtonProps<T>>;
 
-const Button = React.forwardRef(
+const Button: ButtonElement = React.forwardRef(
   <T extends React.ElementType>(
     props: ButtonProps<T>,
     innerRef: typeof props.ref
@@ -19,6 +19,6 @@ const Button = React.forwardRef(
     const { component, ...rest } = props;
     return <ButtonBase as={component} ref={innerRef} {...rest} />;
   }
-) as ButtonElement;
+);
 
 export default Button;

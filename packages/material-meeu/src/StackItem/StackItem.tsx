@@ -8,9 +8,9 @@ type StackItemProps<T extends React.ElementType> = PolymorphicWithRef<
 >;
 type StackItemElement = <E extends React.ElementType>(
   props: StackItemProps<E>
-) => JSX.Element;
+) => React.ReactElement<StackItemProps<E>>;
 
-const StackItem = React.forwardRef(
+const StackItem: StackItemElement = React.forwardRef(
   <T extends React.ElementType>(
     props: StackItemProps<T>,
     innerRef: typeof props.ref
@@ -24,6 +24,6 @@ const StackItem = React.forwardRef(
       />
     );
   }
-) as StackItemElement;
+);
 
 export default StackItem;
