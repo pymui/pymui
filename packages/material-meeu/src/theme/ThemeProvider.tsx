@@ -18,7 +18,7 @@ const ThemeProvider: React.FC<IThemeProvider> = (props) => {
       let body = document.querySelector("body");
       if (body) {
         if (type === "dark") {
-          body.style.backgroundColor = `rgba(31, 31, 31, 1)`;
+          body.style.backgroundColor = `rgba(0, 0, 0, 1)`;
           body.style.color = `rgba(232, 222, 248, 1)`;
         } else {
           body.style.backgroundColor = `rgba(255, 255, 255, 1)`;

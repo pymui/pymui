@@ -1,5 +1,7 @@
 import { CSSProperties } from "react";
 import { proxy } from "valtio";
+//utils
+import { pxToRem, spacing } from "./utils";
 
 export const state = proxy<{
   type: "light" | "dark";
@@ -387,11 +389,11 @@ const theme = {
     },
     readOnly: {
       light: {
-        surface1: `linear-gradient(0deg, rgba(103, 80, 164, 0.05) 0%, rgba(255, 251, 254, 1) 0%);`,
-        surface2: `linear-gradient(0deg, rgba(103,80,164,0.08) 0%, rgba(255,251,254,1) 0%);`,
-        surface3: `linear-gradient(0deg, rgba(103,80,164,0.11) 0%, rgba(255,251,254,1) 0%);`,
-        surface4: `linear-gradient(0deg, rgba(103,80,164,0.12) 0%, rgba(255,251,254,1) 0%);`,
-        surface5: `linear-gradient(0deg, rgba(103,80,164,0.14) 0%, rgba(255,251,254,1) 0%);`,
+        surface1: `linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;`,
+        surface2: `linear-gradient(0deg, rgba(103, 80, 164, 0.08), rgba(103, 80, 164, 0.08)), #FFFBFE;`,
+        surface3: `linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;`,
+        surface4: `linear-gradient(0deg, rgba(103, 80, 164, 0.12), rgba(103, 80, 164, 0.12)), #FFFBFE;`,
+        surface5: `linear-gradient(0deg, rgba(103, 80, 164, 0.14), rgba(103, 80, 164, 0.14)), #FFFBFE;`,
         black: `#000000`,
         white: `#FFFFFF`,
         primary: {
@@ -521,11 +523,11 @@ const theme = {
         },
       },
       dark: {
-        surface1: `linear-gradient(0deg, rgba(208, 188, 255, 0.05) 0%, rgba(28, 27, 31, 1) 0%)`,
-        surface2: `linear-gradient(0deg, rgba(208, 188, 255, 0.08) 0%, rgba(28, 27, 31, 1) 0%)`,
-        surface3: `linear-gradient(0deg, rgba(208, 188, 255, 0.11) 0%, rgba(28, 27, 31, 1) 0%)`,
-        surface4: `linear-gradient(0deg, rgba(208, 188, 255, 0.12) 0%, rgba(28, 27, 31, 1) 0%)`,
-        surface5: `linear-gradient(0deg, rgba(208, 188, 255, 0.14) 0%, rgba(28, 27, 31, 1) 0%)`,
+        surface1: `linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #1C1B1F;`,
+        surface2: `linear-gradient(0deg, rgba(208, 188, 255, 0.08), rgba(208, 188, 255, 0.08)), #1C1B1F;`,
+        surface3: `linear-gradient(0deg, rgba(208, 188, 255, 0.11), rgba(208, 188, 255, 0.11)), #1C1B1F;`,
+        surface4: `linear-gradient(0deg, rgba(208, 188, 255, 0.12), rgba(208, 188, 255, 0.12)), #1C1B1F;`,
+        surface5: `linear-gradient(0deg, rgba(208, 188, 255, 0.14), rgba(208, 188, 255, 0.14)), #1C1B1F;`,
         black: `#000000`,
         white: `#FFFFFF`,
         primary: {
@@ -657,9 +659,63 @@ const theme = {
     },
   },
   effectStyles: {
+    getElevation: (type: "dark" | "light", level: number) => {
+      return new Map([
+        [
+          "light",
+          new Map<number, string>([
+            [
+              1,
+              `0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)`,
+            ],
+            [
+              2,
+              `0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)`,
+            ],
+            [
+              3,
+              `0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              4,
+              `0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              5,
+              `0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0,0,0,0.30)`,
+            ],
+          ]).get(level),
+        ],
+        [
+          "dark",
+          new Map([
+            [
+              1,
+              `0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              2,
+              `0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              3,
+              `0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              4,
+              `0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0,0,0,0.30)`,
+            ],
+            [
+              5,
+              `0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0,0,0,0.30)`,
+            ],
+          ]).get(level),
+        ],
+      ]).get(type) as string;
+    },
     light: {
-      1: `0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0,0,0,0.15);`,
-      2: `0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0,0,0,0.15);`,
+      1: `0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);`,
+      2: `0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)`,
       3: `0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0,0,0,0.30);`,
       4: `0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0,0,0,0.30);`,
       5: `0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0,0,0,0.30);`,
@@ -685,6 +741,8 @@ const theme = {
       ]).get(key) as number;
     },
   },
+  pxToRem,
+  spacing,
 };
 
 export default theme;
