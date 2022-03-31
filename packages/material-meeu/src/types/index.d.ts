@@ -9,5 +9,12 @@ export type { GridItemOwnProps } from "./GridItem";
 export type { StackOwnProps } from "./Stack";
 export type { StackItemOwnProps } from "./StackItem";
 export type { SurfaceOwnProps } from "./Surface";
+export type {
+  HeadlineOwnProps,
+  DisplayTypographyOwnProps,
+  BodyTypographyOwnProps,
+  TitleTypographyOwnProps,
+  LabelTypographyOwnProps,
+} from "./Typography";
 
 export type { IComponent } from "./Component";

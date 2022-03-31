@@ -5,3 +5,4 @@ export * from "./src/Container";
 export * from "./src/Grid";
 export * from "./src/Stack";
 export * from "./src/Surface";
+export * from "./src/Typography";
