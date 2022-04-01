@@ -16,3 +16,6 @@ export { default as TitleTypographyBase } from "./TitleTypography";
 export { default as LabelTypographyBase } from "./LabelTypography";
 
 export { default as BackdropBase } from "./Backdrop";
+
+// List Module
+export { default as ListBase } from "./List";

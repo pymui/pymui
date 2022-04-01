@@ -17,5 +17,6 @@ export type {
   LabelTypographyOwnProps,
 } from "./Typography";
 export type { BackdropOwnProps } from "./Backdrop";
+export type { ListOwnProps } from "./List";
 
 export type { IComponent } from "./Component";
