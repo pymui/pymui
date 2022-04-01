@@ -14,3 +14,5 @@ export { default as DisplayTypographyBase } from "./DisplayTypography";
 export { default as BodyTypographyBase } from "./BodyTypography";
 export { default as TitleTypographyBase } from "./TitleTypography";
 export { default as LabelTypographyBase } from "./LabelTypography";
+
+export { default as BackdropBase } from "./Backdrop";
