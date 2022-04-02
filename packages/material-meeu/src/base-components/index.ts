@@ -19,3 +19,5 @@ export { default as BackdropBase } from "./Backdrop";
 
 // List Module
 export { default as ListBase } from "./List";
+export { default as ListItemBase } from "./ListItem";
+export { default as ListItemTextBase } from "./ListItemText";

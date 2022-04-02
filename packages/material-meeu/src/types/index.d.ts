@@ -18,5 +18,6 @@ export type {
 } from "./Typography";
 export type { BackdropOwnProps } from "./Backdrop";
 export type { ListOwnProps } from "./List";
+export type { ListItemOwnProps, ListItemTextOwnProps } from "./ListItem";
 
 export type { IComponent } from "./Component";
