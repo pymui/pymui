@@ -1,1 +1,4 @@
-export type ListOwnProps = {};
+export type ListOwnProps = {
+  dense?: true;
+  disablePadding?: true;
+};
