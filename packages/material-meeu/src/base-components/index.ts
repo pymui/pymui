@@ -21,3 +21,15 @@ export { default as BackdropBase } from "./Backdrop";
 export { default as ListBase } from "./List";
 export { default as ListItemBase } from "./ListItem";
 export { default as ListItemTextBase } from "./ListItemText";
+
+// Card Module
+export { default as CardBase } from "./Card";
+export { default as CardHeaderBase } from "./CardHeader";
+export { default as CardHeaderAvatarBase } from "./CardHeaderAvatar";
+export { default as CardHeaderTitleBase } from "./CardHeaderTitle";
+export { default as CardHeaderSubtitleBase } from "./CardHeaderSubtitle";
+export { default as CardHeaderActionBase } from "./CardHeaderAction";
+export { default as CardTitleBase } from "./CardTitle";
+export { default as CardTitleWrapper } from "./CardTitleWrapper";
+export { default as CardActionsBase } from "./CardActions";
+export { default as CardImageBase } from "./CardImage";

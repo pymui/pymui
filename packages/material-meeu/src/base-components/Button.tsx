@@ -152,7 +152,6 @@ const Button = styled("button", {
       textTransform: "uppercase",
       display: "table-cell",
       padding: "0.5rem 1rem",
-      margin: "0 auto",
       verticalAlign: "middle",
       cursor: "pointer",
       border: "none",

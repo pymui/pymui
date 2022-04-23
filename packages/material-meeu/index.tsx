@@ -8,3 +8,4 @@ export * from "./src/Surface";
 export * from "./src/Typography";
 export * from "./src/Backdrop";
 export * from "./src/List";
+export * from "./src/Card";

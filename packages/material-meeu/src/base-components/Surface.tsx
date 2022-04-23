@@ -3,16 +3,9 @@ import styled, { CSSObject } from "@emotion/styled";
 import { useMemo } from "react";
 import { useTheme } from "../theme";
 
-type Props = {
-  variant?: "elevated" | "outlined" | "flat";
-  elevation?: number;
-  radius?: number;
-  corner?: "rounded" | "square";
-} & SurfaceOwnProps;
-
 const Surface = styled("div", {
   label: "Surface",
-})<Partial<Props>>(({ variant, elevation, corner, radius }) => {
+})<Partial<SurfaceOwnProps>>(({ variant, elevation, shape, radius }) => {
   const { theme, type } = useTheme();
   const _variant = useMemo(
     () =>
@@ -34,7 +27,7 @@ const Surface = styled("div", {
           },
         ],
         [
-          "flat",
+          "filled",
           {
             background: new Map([
               ["light", theme.colorStyles.readOnly.light.surface1],
@@ -42,21 +35,35 @@ const Surface = styled("div", {
             ]).get(type),
           },
         ],
+        [
+          "outlined",
+          {
+            border: new Map([
+              ["light", `1px solid ${theme.colorStyles.sys.light.outline}`],
+              ["dark", `1px solid ${theme.colorStyles.sys.dark.outline}`],
+            ]).get(type),
+            background: new Map([
+              ["light", theme.colorStyles.readOnly.light.surface1],
+              ["dark", theme.colorStyles.readOnly.dark.surface1],
+            ]).get(type),
+          },
+        ],
       ]),
-    [variant, elevation, type, theme]
+    [variant, elevation, type]
   ).get(variant) as CSSObject;
-  const _corner = useMemo(
+  const _shape = useMemo(
     () =>
-      new Map<typeof corner, CSSObject>([
+      new Map<typeof shape, CSSObject>([
         ["rounded", { borderRadius: theme.spacing(radius ?? 1) }],
       ]),
-    [corner, radius, theme]
-  ).get(corner) as CSSObject;
-  return Object.assign({}, _variant, _corner) as CSSObject;
+    [shape, radius]
+  ).get(shape) as CSSObject;
+  return Object.assign({}, _variant, _shape) as CSSObject;
 });
 
 Surface.defaultProps = {
-  variant: "flat",
+  variant: "filled",
+  shape: "rounded",
 };
 
 export default Surface;

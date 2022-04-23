@@ -10,6 +10,7 @@ export type DisplayTypographyOwnProps = {
 
 export type BodyTypographyOwnProps = {
   variant?: "body1" | "body2" | "caption" | "overline";
+  supportingText?: boolean;
 } & Size;
 
 export type TitleTypographyOwnProps = {} & Size;

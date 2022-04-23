@@ -287,7 +287,7 @@ const theme = {
         background: "#1C1B1F",
         onBackground: "#E6E1E5",
         surface: "#1C1B1F",
-        onSurface: "#FE6E1E5",
+        onSurface: "#E6E1E5",
         surfaceVariant: "#49454F",
         onSurfaceVariant: "#CAC4D0",
         outline: "#938F99",

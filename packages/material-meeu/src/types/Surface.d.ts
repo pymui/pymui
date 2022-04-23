@@ -1,6 +1,6 @@
 export type SurfaceOwnProps = {
-  variant?: "elevated" | "outlined" | "flat";
-  corner?: "rounded" | "square";
+  variant?: "elevated" | "outlined" | "filled";
+  shape?: "rounded" | "square";
   elevation?: number;
   radius?: number;
 };

@@ -5,7 +5,7 @@ import { useTheme } from "../theme";
 
 const BodyTypography = styled("p", {
   label: "BodyTypography",
-})<Partial<BodyTypographyOwnProps>>(({ variant, size }) => {
+})<Partial<BodyTypographyOwnProps>>(({ variant, size, supportingText }) => {
   const { theme } = useTheme();
   const _variant = useMemo(
     () =>
@@ -84,6 +84,19 @@ const BodyTypography = styled("p", {
       ]),
     [size]
   ).get(size);
+  const _supportingText = useMemo(
+    () =>
+      new Map<typeof supportingText, CSSObject>([
+        [
+          true,
+          {
+            marginInline: theme.spacing(2),
+            marginBlock: theme.spacing(3),
+          },
+        ],
+      ]),
+    [supportingText]
+  ).get(supportingText);
   return Object.assign(
     {
       fontFamily: `Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
@@ -96,7 +109,8 @@ const BodyTypography = styled("p", {
       marginBlockEnd: theme.spacing(1),
     },
     _variant,
-    _size
+    _size,
+    _supportingText
   );
 });
 

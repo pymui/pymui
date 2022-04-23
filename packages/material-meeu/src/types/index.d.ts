@@ -20,4 +20,17 @@ export type { BackdropOwnProps } from "./Backdrop";
 export type { ListOwnProps } from "./List";
 export type { ListItemOwnProps, ListItemTextOwnProps } from "./ListItem";
 
+// Card Module
+export type {
+  CardOwnProps,
+  CardHeaderOwnProps,
+  CardHeaderActionOwnProps,
+  CardHeaderAvatarOwnProps,
+  CardHeaderSubtitleOwnProps,
+  CardHeaderTitleOwnProps,
+  CardActionsOwnProps,
+  CardImageOwnProps,
+} from "./Card";
+export type { CardTitleOwnProps } from "./CardTitle";
+
 export type { IComponent } from "./Component";
