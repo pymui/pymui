@@ -7,7 +7,7 @@ export const state = proxy<{
   type: "light" | "dark";
   setType: (type: "light" | "dark") => void;
 }>({
-  type: "dark",
+  type: "light",
   setType: (type) => {
     state.type = type;
   },
@@ -740,6 +740,12 @@ const theme = {
         ["xl", 1440],
       ]).get(key) as number;
     },
+  },
+  getZIndex: (surface: "AppBar" | "menu") => {
+    return new Map<typeof surface, number>([
+      ["AppBar", 1000],
+      ["menu", 1100],
+    ]).get(surface) as number;
   },
   pxToRem,
   spacing,
