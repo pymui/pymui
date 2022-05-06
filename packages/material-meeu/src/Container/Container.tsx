@@ -25,6 +25,7 @@ const Container: ContainerElement = React.forwardRef(
         as={component as typeof component}
         ref={innerRef}
         {...rest}
+        data-container
       />
     );
   }
