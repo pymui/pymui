@@ -1,0 +1,9 @@
+{
+    "branches": [
+        {
+            "name": "main",
+            "channel": "alpha"
+        }
+    ],
+    "repositoryUrl": "https://github.com/biswarup35/material-you.git"
+}
