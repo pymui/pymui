@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-      paths:
-        - "packages/material-you/**"
+    paths:
+      - "packages/material-you/**"
 
 jobs:
   release:
@@ -22,7 +22,6 @@ jobs:
         uses: actions/install@v2
         with:
           yarn: true
-        run: yarn install --frozen-lockfile
       - name: "Publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
