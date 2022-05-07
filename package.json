@@ -1,5 +1,5 @@
 {
-  "name": "Meeu",
+  "name": "material-you",
   "version": "0.0.0",
   "description": "Meeu is a component library for React to build UI faster, beautiful, adaptive. Meeu design system built on top of Material You design",
   "private": true,
@@ -12,9 +12,12 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz"
   },
   "devDependencies": {
+    "commitizen": "^4.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.0",
     "prettier": "^2.5.1",
     "turbo": "latest"
@@ -23,5 +26,10 @@
     "yarn": ">=1.22.17",
     "node": ">=14.0.0"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.17",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
