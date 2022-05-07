@@ -1,5 +1,5 @@
-const withTM = require("next-transpile-modules")(["@biswarup35/material-you"]);
+// const withTM = require("next-transpile-modules")(["@biswarup35/material-you"]);
 
-module.exports = withTM({
-  reactStrictMode: true,
-});
+// module.exports = withTM({
+//   reactStrictMode: true,
+// });
