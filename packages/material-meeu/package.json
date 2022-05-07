@@ -1,14 +1,12 @@
 {
-  "name": "@meeu/material",
+  "name": "@biswarup35/material-you",
   "version": "0.0.0",
   "private": false,
-  "description": "Meeu is a component librabry for React to build UI faster, beautiful, adaptive. Meeu design system built on top of Material You design",
+  "description": "Meeu is a component library for React to build UI faster, beautiful, adaptive. Meeu design system built on top of Material You design",
   "keywords": [
-    "react",
-    "react-comonent",
-    "material you",
-    "material design",
-    "meeu"
+    "material 3",
+    "react ui",
+    "material design"
   ],
   "main": "./index.tsx",
   "types": "./index.tsx",
