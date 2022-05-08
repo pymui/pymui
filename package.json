@@ -1,6 +1,6 @@
 {
   "name": "material-you",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Material You is a React component library for building modern user interfaces faster.",
   "private": true,
   "workspaces": [
