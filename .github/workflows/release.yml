@@ -22,6 +22,8 @@ jobs:
         uses: actions/install@v2
         with:
           yarn: true
+      - name: "Run build"
+        run: yarn turbo run build
       - name: "Publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
