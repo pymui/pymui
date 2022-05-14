@@ -1,8 +1,10 @@
 {
     "branches": [
+        "main",
         {
-            "name": "main",
-            "channel": "alpha"
+            "name": "canary",
+            "channel": "beta",
+            "prerelease": true
         }
     ],
     "plugins": [
