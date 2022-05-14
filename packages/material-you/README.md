@@ -1,8 +1,25 @@
-# @biswarup35/material-you
+<h1 align="center">Material You</h1>
 
-React UI library based on Google's Material 3 design system.
+**Material You** is a React component library for building modern user interfaces faster.
+
+- _Material You_ is a collection of React components that features my implementation of [Material 3](https://m3.material.io/) design system.
+- With _Material You_ you can easily build user interfaces that are modern, fast, simple, and beautiful.
+
+<div align="center">
+
+**:construction: This project is under heavy construction :construction:**
+
+:warning: Not ready for production use :no_entry:
+
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mui/material-ui/blob/HEAD/LICENSE)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
+</div>
 
 ## Installation
+
+### Material You
 
 _Material You_ is available as an [npm package](https://www.npmjs.com/package/@biswarup35/material-you).
 
@@ -10,4 +27,23 @@ _Material You_ is available as an [npm package](https://www.npmjs.com/package/@b
 
 ```sh
 npm install @biswarup35/material-you
+```
+
+or
+
+```sh
+yarn add @biswarup35/material-you
+```
+
+## Getting Started
+
+Here's an example of how to use _Material You_:
+
+```jsx
+import React from "react";
+import { Button } from "@biswarup35/material-you";
+
+const App = () => {
+  return <Button variant="filled">Hello World!</Button>;
+};
 ```
