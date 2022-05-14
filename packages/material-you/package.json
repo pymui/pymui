@@ -12,6 +12,7 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "release": "semantic-release"
   },
   "dependencies": {

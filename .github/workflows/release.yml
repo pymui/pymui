@@ -1,8 +1,7 @@
 name: Release
 on:
   push:
-    branches:
-      - [main, canary]
+    branches: [main, canary]
     paths:
       - "packages/material-you/**"
 
@@ -21,7 +20,7 @@ jobs:
       - name: "Yarn install"
         run: yarn install --frozen-lockfile
       - name: "Run build"
-        run: yarn turbo run build
+        run: yarn turbo run build --filter=@biswarup35/material-you
       - name: "Publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
