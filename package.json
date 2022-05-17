@@ -14,7 +14,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
     "commit": "cz",
-    "release": "turbo run release"
+    "release": "turbo run release",
+    "docs:dev": "turbo run dev --filter=docs",
+    "docs:build": "turbo run build --filter=docs",
+    "web:dev": "turbo run dev --filter=web",
+    "web:build": "turbo run build --filter=web"
   },
   "devDependencies": {
     "commitizen": "^4.0.0",
