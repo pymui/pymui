@@ -23,7 +23,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: "Run build"
         # Builds the package using release configuration
-        run: yarn run release:build --filter=@biswarup35/material-you
+        run: yarn turbo run release:build --filter=@biswarup35/material-you
       - name: "Publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
