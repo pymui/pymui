@@ -1,6 +1,8 @@
 import * as React from "react";
 import type { PolymorphicWithRef, ButtonOwnProps } from "../types";
 import { ButtonBase } from "../base-components";
+import { useEventListener } from "../hooks";
+import rippleEvent from "../utils/events/rippleEffect";
 
 type ButtonProps<T extends React.ElementType> = PolymorphicWithRef<
   T,
@@ -17,7 +19,16 @@ const Button: ButtonElement = React.forwardRef(
     innerRef: typeof props.ref
   ) => {
     const { component, ...rest } = props;
-    return <ButtonBase as={component} ref={innerRef} {...rest} />;
+    const buttonRef = React.useRef<HTMLButtonElement>(null);
+    // forwarding the ref using imperative API
+    React.useImperativeHandle(innerRef, () => buttonRef.current);
+    // useEventListener to add ripple effect
+    useEventListener(
+      "mousedown",
+      (event) => rippleEvent(event, buttonRef),
+      buttonRef
+    );
+    return <ButtonBase as={component} ref={buttonRef} {...rest} />;
   }
 );
 
