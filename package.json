@@ -1,6 +1,4 @@
 {
-  "name": "material-you",
-  "version": "1.0.0",
   "description": "Material You is a React component library for building modern user interfaces faster.",
   "private": true,
   "workspaces": [
@@ -18,7 +16,8 @@
     "docs:dev": "turbo run dev --filter=docs",
     "docs:build": "turbo run build --filter=docs",
     "web:dev": "turbo run dev --filter=web",
-    "web:build": "turbo run build --filter=web"
+    "web:build": "turbo run build --filter=web",
+    "material-you:build": "turbo run build --filter=material-you"
   },
   "devDependencies": {
     "commitizen": "^4.0.0",

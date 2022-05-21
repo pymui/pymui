@@ -13,7 +13,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # If everything passes... Now we can commit
 echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
-yarn turbo run build --ignore=@biswarup35/material-you ||
+yarn run build ||
 (
     echo '❌👷🔨❌ Better call Bob... Because your build failed ❌👷🔨❌
             Next build failed: View the errors above to see why. 

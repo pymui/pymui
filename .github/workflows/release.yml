@@ -1,7 +1,9 @@
 name: Release
 on:
   push:
+    # Only run on tags
     branches: [main, canary]
+    # Only run on given directory
     paths:
       - "packages/material-you/**"
 
@@ -20,7 +22,8 @@ jobs:
       - name: "Yarn install"
         run: yarn install --frozen-lockfile
       - name: "Run build"
-        run: yarn turbo run build --filter=@biswarup35/material-you
+        # Builds the package using release configuration
+        run: yarn run release:build --filter=@biswarup35/material-you
       - name: "Publish"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

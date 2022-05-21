@@ -19,6 +19,11 @@
             "dependsOn": [
                 "^build"
             ]
+        },
+        "release:build": {
+            "dependsOn": [
+                "^build"
+            ]
         }
     }
 }
