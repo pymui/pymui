@@ -1,3 +1,10 @@
+# [1.1.0-canary.2](https://github.com/biswarup35/material-you/compare/v1.1.0-canary.1...v1.1.0-canary.2) (2022-06-12)
+
+
+### Features
+
+* **drawer:** basic drawer component ([e74ce8a](https://github.com/biswarup35/material-you/commit/e74ce8a7dfa68ff7e9c20fbadc76f5a44d3050b7))
+
 # [1.1.0-canary.1](https://github.com/biswarup35/material-you/compare/v1.0.1-canary.1...v1.1.0-canary.1) (2022-06-12)
 
 
