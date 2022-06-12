@@ -3,9 +3,6 @@ on:
   push:
     # Only run on tags
     branches: [main, canary]
-    # Only run on given directory
-    paths:
-      - "packages/material-you/**"
 
 jobs:
   release:
