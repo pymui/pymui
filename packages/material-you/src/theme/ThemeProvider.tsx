@@ -18,22 +18,15 @@ const ThemeProvider: React.FC<IThemeProvider> = (props) => {
   const { theme, children, ...rest } = props;
   const { type } = useSnapshot(state);
 
-  const _bg = useMemo(
-    () =>
-      new Map([
-        ["light", "rgba(255, 255, 255, 1)"],
-        ["dark", "rgba(0, 0, 0, 1)"],
-      ]),
-    [type]
-  ).get(type);
-  const _color = useMemo(
-    () =>
-      new Map([
-        ["light", "rgba(0, 0, 0, 1)"],
-        ["dark", "rgba(232, 222, 248, 1)"],
-      ]),
-    [type]
-  ).get(type);
+  const _bg = useMemo(() => new Map<typeof type, string>(), [type])
+    .set("light", "rgba(255, 255, 255, 1)")
+    .set("dark", "rgba(0, 0, 0, 1)")
+    .get(type) as string;
+
+  const _color = useMemo(() => new Map<typeof type, string>(), [type])
+    .set("light", "rgba(0, 0, 0, 1)")
+    .set("dark", "rgba(232, 222, 248, 1)")
+    .get(type) as string;
 
   // Override the default theme with the one passed in
   const app_theme = Object.assign(d_theme, theme);
