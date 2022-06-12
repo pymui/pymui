@@ -11,9 +11,10 @@
 
 :warning: Not ready for production use :no_entry:
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mui/material-ui/blob/HEAD/LICENSE)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+![GitHub](https://img.shields.io/github/license/biswarup35/material-you?style=for-the-badge)
+![npm (tag)](https://img.shields.io/npm/v/@biswarup35/material-you/canary?style=for-the-badge)
+![npm (scoped)](https://img.shields.io/npm/v/@biswarup35/material-you?color=green&style=for-the-badge)
+![npm](https://img.shields.io/npm/dm/@biswarup35/material-you?style=for-the-badge)
 
 </div>
 
