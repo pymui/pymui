@@ -1,9 +1,12 @@
 {
     "branches": [
-        "main",
+        {
+            "name": "main",
+            "channel": "latest"
+        },
         {
             "name": "canary",
-            "channel": "beta",
+            "channel": "canary",
             "prerelease": true
         }
     ],
